@@ -94,6 +94,10 @@ RECOVERY_FSTAB_VERSION := 2
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 
+# Specify the Target GCC Version here:.
+# Note that if this is set, your entire build will build off this specified toolchain.
+TARGET_GCC_VERSION := 4.6
+
 # SELinux
 ifeq ($(HAVE_SELINUX),true)
 BOARD_SEPOLICY_DIRS += \
