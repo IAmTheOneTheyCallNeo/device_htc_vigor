@@ -38,6 +38,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL3 androidboot.hardware=vigor no_console_su
 TARGET_KERNEL_VERSION := 3.0
 TARGET_KERNEL_CONFIG := vigor_aosp_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/vigor-$(TARGET_KERNEL_VERSION)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
@@ -45,6 +46,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # RIL
 BOARD_USE_NEW_LIBRIL_HTC := true
+BOARD_RIL_CLASS := "../../../device/htc/vigor/ril/"
 
 # HTCLOG
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
@@ -91,3 +93,38 @@ TARGET_RECOVERY_FSTAB := device/htc/vigor/rootdir/etc/fstab.vigor
 RECOVERY_FSTAB_VERSION := 2
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+
+# SELinux
+ifeq ($(HAVE_SELINUX),true)
+BOARD_SEPOLICY_DIRS += \
+        device/htc/vigor/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+file_contexts \
+property_contexts \
+te_macros \
+bridge.te \
+camera.te \
+conn_init.te \
+device.te \
+dhcp.te \
+domain.te \
+drmserver.te \
+file.te \
+kickstart.te \
+init.te \
+mediaserver.te \
+mpdecision.te \
+netmgrd.te \
+property.te \
+qmux.te \
+rild.te \
+rmt.te \
+sensors.te \
+surfaceflinger.te \
+system.te \
+tee.te \
+thermald.te \
+ueventd.te \
+wpa_supplicant.te
+endif
