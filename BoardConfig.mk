@@ -100,5 +100,6 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 
 # Specify the Target GCC Version here:.
 # Note that if this is set, your entire build will build off this specified toolchain.
-TARGET_GCC_VERSION := 4.7
+TARGET_GCC_VERSION_ARM := 4.8
+TARGET_GCC_VERSION_AND := 4.6
 
