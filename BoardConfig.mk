@@ -38,7 +38,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL3 androidboot.hardware=vigor no_console_su
 TARGET_KERNEL_VERSION := 3.0
 TARGET_KERNEL_CONFIG := vigor_aosp_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/vigor-$(TARGET_KERNEL_VERSION)
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-$(TARGET_GCC_VERSION)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-$(TARGET_GCC_VERSION_ARM)
 
 # Optimizations
 ARCH_ARM_HAVE_VFP := true
