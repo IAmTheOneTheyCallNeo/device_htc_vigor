@@ -40,6 +40,9 @@ TARGET_KERNEL_CONFIG := vigor_aosp_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/vigor-$(TARGET_KERNEL_VERSION)
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-$(TARGET_GCC_VERSION_ARM)
 
+# Define the CPU Variant now required by CM-4.2 source
+TARGET_CPU_VARIANT := scorpion
+
 # Optimizations
 ARCH_ARM_HAVE_VFP := true
 ARCH_ARM_HAVE_NEON := true
@@ -101,5 +104,5 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 # Specify the Target GCC Version here:.
 # Note that if this is set, your entire build will build off this specified toolchain.
 TARGET_GCC_VERSION_ARM := 4.8
-TARGET_GCC_VERSION_AND := 4.6
+TARGET_GCC_VERSION_AND := 4.7
 
