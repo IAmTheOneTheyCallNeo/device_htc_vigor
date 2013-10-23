@@ -1,0 +1,10 @@
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- This causes lag on tuna-based devices -->
+    <bool name="scrolling_enabled">false</bool>
+
+</resources>
