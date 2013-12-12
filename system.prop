@@ -28,6 +28,7 @@ persist.rild.ril.ltedr = 0
 persist.rild.ril.ltedrtable=max_retries=infinite,10000
 DEVICE_PROVISIONED = 1
 ro.baseband.arch = svlte2a
+ro.ril.svdo=true
 
 # For QC perf binary hooks
 ro.vendor.extension_library = /system/lib/libqc-opt.so
